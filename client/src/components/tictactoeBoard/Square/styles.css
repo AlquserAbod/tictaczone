@@ -1,0 +1,5 @@
+@media (hover: hover) {
+    .square-can-hover:hover{
+        transform: scale(1.10);
+    }
+}
