@@ -11,6 +11,14 @@ import handleSocketEvents  from '../handler/socketHandler.js';
 // Rest of your code...
 
 
+app.use(cors({
+	origin: process.env.APP_URL, // Your frontend URL
+	methods: ['GET', 'POST'],
+	allowedHeaders: ['Content-Type'],
+	credentials: true // Allow cookies and authentication headers
+  }));
+
+  
 const app = express();
 
 const server = http.createServer(app);
