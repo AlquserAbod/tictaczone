@@ -2,19 +2,12 @@ import dotenv from "dotenv";
 
 dotenv.config()
 
-import path from 'path';
 import { app, server } from './socket/socket.js';
 import express from 'express';
 import cookieParser from "cookie-parser";
-const __dirname = path.resolve();
-
-dotenv.config({path: path.join(__dirname,"/.env")})
 
 app.use(express.json());
 app.use(cookieParser());
-
-
-
 
 const PORT = process.env.PORT || 5000;
 
