@@ -11,20 +11,20 @@ import handleSocketEvents  from '../handler/socketHandler.js';
 // Rest of your code...
 
 
+
+
+const app = express();
+
 app.use(cors({
 	origin: process.env.APP_URL, // Your frontend URL
 	methods: ['GET', 'POST'],
-	allowedHeaders: ['Content-Type'],
 	credentials: true // Allow cookies and authentication headers
   }));
 
-  
-const app = express();
-
-const server = http.createServer(app);
+  const server = http.createServer(app);
 
 const io = new Server(server, {
-	transports: ['polling'],
+	transports: ['websocket', 'polling'],
 	cors: {
 		origin: process.env.APP_URL,
 		methods: ["GET", "POST"],

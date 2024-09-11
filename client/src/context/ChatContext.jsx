@@ -39,14 +39,11 @@ export const ChatContextProvider = ({ children }) => {
                 }
             },
             join_chat: (chat) => {
-                console.log(" join chat ");
-
                 if(chat == null) toast.error('no chat founded')
                 
                 setChat(chat)
             },
             leave_chat: (chat) => {
-                console.log(" leave chat ");
                 if(chat == null) toast.error('no chat founded')
                 
                 setChat(null)

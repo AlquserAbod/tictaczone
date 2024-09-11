@@ -70,8 +70,6 @@ export const RoomContextProvider = ({ children }) => {
                 toast.error("There are no public rooms available. Try creating a public room and waiting for players");
             },
             room_in_match: () => {
-                console.log(" room in match");
-
                 setWaitToComplateMatch(true)
             },
             match_ended: () => {
